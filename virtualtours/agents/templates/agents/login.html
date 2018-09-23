@@ -1,28 +1,39 @@
 {% extends 'agents/base.html' %}
 
 {% block content %}
-<form class="form-signin" action="{% url 'signin' %}" method="POST">{% csrf_token %}
-  <div class="text-center mb-4">
-    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Welcome To VirtualTours</h1>
-  </div>
+<div class="col-md-4">
 
-  <div class="form-label-group">
-    <input type="input" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputEmail">Email address</label>
-  </div>
-
-  <div class="form-label-group">
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <label for="inputPassword">Password</label>
-  </div>
-
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
-</form>
+</div>
+<div class="col-md-8">
+      <form class="form-signin" action="{% url 'signin' %}" method="POST">{% csrf_token %}
+        <div class="text-center mb-4">
+          <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+          <h1 class="h3 mb-3 font-weight-normal">Welcome To VirtualTours</h1>
+        </div>
+      
+        <div class="form-label-group">
+          <input type="input" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          <label for="inputEmail">Email address</label>
+        </div>
+      
+        <div class="form-label-group">
+          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <label for="inputPassword">Password</label>
+        </div>
+      
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+          <label>
+              <a href="{% url 'register_user' %}">
+                  <span>New User Register Here</span>
+              </a>
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    
+        <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+      </form>
+</div>
 {% endblock %}

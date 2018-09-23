@@ -2,4 +2,9 @@
 
 {% block content %}
 
+Welcome -- {{ user }}
+<a href="{% url 'signout' %}" class="top-menu">
+  <button type="button" class="btn btn-primary btn-sm">LogOut</button>
+</a>
+
 {% endblock %}
