@@ -1,14 +1,21 @@
 {% extends 'agents/base.html' %}
 
 {% block content %}
-<div class="col-md-10">
-  Welcome -- {{ user }}
-</div>
-<div class="col-md-2">
-    <a href="{% url 'signout' %}" class="top-menu">
-        <button type="button" class="btn btn-primary btn-sm">LogOut</button>
-    </a>
-</div>
+<div class="row">
+  <div class="col-md-10">
+    Welcome -- {{ user }}
+  </div>
+  <div class="col-md-2">
 
+  </div>
+</div>
+<div class="row">
+  <div class="well">
+    <form>
+      Birthday:
+      <input type="date" name="bday">
+    </form>
+  </div>
+</div>
 
 {% endblock %}
